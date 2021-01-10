@@ -25,15 +25,13 @@ Here is the basic concept:
 - [.NET Core SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1) or higher
 - [Dapper](https://github.com/StackExchange/Dapper)
 - Built-in Dependency Injection
-- WinForms built-in validation
+- ASP.NET Core MVC
 
 ## Application Architecture
 A clean architecture solution has been adopted for this project. Each layer as illustrated in the diagram below has clear responsibilities.
 
 ### Application Core
- The `Application Core` holds the business model, which includes the entities, services and interfaces. This layer has been divided into two parts. The first part contains all the
-common items that will be used in the subsequent layers. Interfaces include abstractions for operations that will be performed using `Infrastructure` such as data access and file 
-system access.
+ The `Application Core` holds the business model, which includes the entities, services and interfaces. This layer has been divided into two parts. The first part contains all the common items that will be used in the subsequent layers. Interfaces include abstractions for operations that will be performed using `Infrastructure` such as data access and file system access.
 
 ### Infrastructure
 The `Infrastructure` layer typically comprises data access implementation and all related tech stack that will be used in the application. In this application, data access implementation
