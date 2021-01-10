@@ -1,13 +1,11 @@
-# Dental Application System 
+# Dental Practice Application System 
 
-This is a desktop-based software application developed to support the requirements of the dentist to keep track of patients' information.
-
-> :warning: Project still under development phase.
+This is a web-based software solution developed to support the requirements of the dentist to keep track of patients' information.
 
 ## Project Modules
-- Dashboard
+- Appointment
 - Patient Registration 
-- Patient Appointment
+- Patient records, treatment history, appointments.
 - Diagnosis & Treatment details
 
 ## What has been built
@@ -42,24 +40,41 @@ The `Infrastructure` layer typically comprises data access implementation and al
 code has been abstracted through the use of the [Repository Design Pattern](https://deviq.com/repository-pattern/).
 
 ### Presentation Layer
-The presentation layer is the entry point of the application. For this application, a [WinForm](https://docs.microsoft.com/en-us/visualstudio/ide/create-csharp-winform-visual-studio) has been adopted. The WinForm project references the `Application Core layer`, and its types
+The presentation layer is the entry point of the application. The Web App project references the `Application Core layer`, and its types
 interact with `infrastructure` strictly through interfaces defined in the `Dental.Common`.
 
 ![Dental-Archi](https://user-images.githubusercontent.com/23207774/97895854-c0d7fd80-1d4d-11eb-9f7e-b0ac739b33ec.png)
 
-> :exclamation: The `Program.cs` in the WinForm project is responsible for configuring the application and for wiring up implementation types to interfaces, thereby allowing dependency injection to
-work properly at run time.
 
 ## Application Screens
 
-- ### Dashboard Overview
+- ### Authentication
+![1](https://user-images.githubusercontent.com/23207774/104124974-5c4ca680-536d-11eb-8d5c-33364d61cf68.png)
 
-![dashboard_app](https://user-images.githubusercontent.com/23207774/97897019-558f2b00-1d4f-11eb-9c6d-5fbec61f16de.png)
+- ### View Appointment
+ - **View Appointments by month**
+![2](https://user-images.githubusercontent.com/23207774/104124986-68d0ff00-536d-11eb-9c73-890eaf7f86fa.png)
+
+ - **View Appointments by week**
+ ![3](https://user-images.githubusercontent.com/23207774/104125025-a0d84200-536d-11eb-8fce-b8d01bf355dc.png)
+ 
+- ### Schedule an Appointment
+![4](https://user-images.githubusercontent.com/23207774/104125026-a170d880-536d-11eb-811b-8e3eae968252.png)
 
 - ### Patient List
+![5](https://user-images.githubusercontent.com/23207774/104124989-6a9ac280-536d-11eb-8635-e7832687988c.png)
 
-![patient_list_app](https://user-images.githubusercontent.com/23207774/97897134-7f485200-1d4f-11eb-8f70-9a206cb78feb.png)
+- ### Patient Details
+ - **Patient Basic Information**
+ ![6](https://user-images.githubusercontent.com/23207774/104125029-a2096f00-536d-11eb-97ce-64c751463978.png)
+ 
+ - **Adding a treatment for patient**
+ ![7](https://user-images.githubusercontent.com/23207774/104125031-a2a20580-536d-11eb-9585-96aac98e92cc.png)
+ 
+ - **Viewing all treatments for patient**
+ ![8](https://user-images.githubusercontent.com/23207774/104125032-a33a9c00-536d-11eb-949f-796db95957d9.png)
 
-- ### Patient Registration & Appointment Schedule
+ - **View all past and upcoming appointments for patient**
+ ![9](https://user-images.githubusercontent.com/23207774/104125033-a3d33280-536d-11eb-9da4-097d77dd995b.png)
 
-![patient_app](https://user-images.githubusercontent.com/23207774/97897116-76f01700-1d4f-11eb-81c9-480630ce4bd1.png)
+
